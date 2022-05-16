@@ -1,0 +1,28 @@
+using System;
+
+namespace Practice
+{
+    class Myclass
+    {
+        static void Main(string[] args)
+        {
+            double width, height, woodLength, glassArea;
+            string widthInput, heightInput;
+
+            Console.WriteLine("Enter your measured Length : " );
+            widthInput = Console.ReadLine();
+            Console.WriteLine("Enter your measured Height : ");
+            heightInput = Console.ReadLine();
+
+            width = double.Parse(widthInput);
+            height = double.Parse(heightInput);
+
+            woodLength = 2 * (width + height) * 3.25;
+            glassArea = 2 * (width * height);
+
+            Console.WriteLine("The length of the wood is : " + woodLength + " Feet");
+            Console.WriteLine("The area of the glass is :" + glassArea + " Square metres");
+
+        }
+    }
+}
