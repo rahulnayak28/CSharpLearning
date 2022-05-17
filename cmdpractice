@@ -1,28 +1,47 @@
 using System;
 
-namespace Practice
+class MyFirstClass
 {
-    class Myclass
-    {
-        static void Main(string[] args)
-        {
-            double width, height, woodLength, glassArea;
-            string widthInput, heightInput;
+	static void Main()
+	{
+		double width, height, woodLength, glassArea;
+		string widthString, heightString;
+		const double minWidth = 2;
+		const double maxWidth = 25;
+		const double minHeight = 4;
+		const double maxHeight = 7;
+		const double Value = 1;
+		
+		// User Input width & height
+		Console.WriteLine ( " Enter measured Width : ");
+		widthString = Console.ReadLine();
+		width = double.Parse(widthString);
+		Console.WriteLine ( " Enter measured Height : ");
+		heightString = Console.ReadLine();
+		height = double.Parse(heightString);
+		
+		if ((width < minWidth  || width > maxWidth) || (height < minHeight  || height > maxHeight))
+		{
+			Console.WriteLine ("Entered Width is either too small or too large. \n Enter width between " + minWidth + " and " + maxWidth);
+			Console.WriteLine ("Entered Height is either too small or too large. \n Enter Height between " + minHeight + " and " + maxHeight);
+		}
+		
+		
+		else
+		{
+		woodLength = 2 * (width + height) * 3.25;
+		glassArea =  2 * (width * height);
+		
+		Console.WriteLine ( " The Length of the wood is : " + woodLength + " feet");
+		Console.WriteLine (" The Area of the glass is : " + glassArea + " Square Metres" );
+		// To prevents the screen from 
+        // running and closing quickly
+		Console.ReadKey();
+			
+		}
+		
+		
+		
+	}
 
-            Console.WriteLine("Enter your measured Length : " );
-            widthInput = Console.ReadLine();
-            Console.WriteLine("Enter your measured Height : ");
-            heightInput = Console.ReadLine();
-
-            width = double.Parse(widthInput);
-            height = double.Parse(heightInput);
-
-            woodLength = 2 * (width + height) * 3.25;
-            glassArea = 2 * (width * height);
-
-            Console.WriteLine("The length of the wood is : " + woodLength + " Feet");
-            Console.WriteLine("The area of the glass is :" + glassArea + " Square metres");
-
-        }
-    }
 }
