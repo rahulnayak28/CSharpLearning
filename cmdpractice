@@ -10,9 +10,12 @@ class MyFirstClass
 		const double maxWidth = 25;
 		const double minHeight = 4;
 		const double maxHeight = 7;
-		const double Value = 1;
-		
+		const double Value = 1; // not used anywhere, still have to set due to compilation error in online C# compiler
+		int i;
 		// User Input width & height
+		for ( i = 1 ; i < 4 ; i = i + 1 )
+		{
+			Console.WriteLine ("This is your " +  i + " attempt out of maximum 3 attempts ");
 		Console.WriteLine ( " Enter measured Width : ");
 		widthString = Console.ReadLine();
 		width = double.Parse(widthString);
@@ -20,11 +23,15 @@ class MyFirstClass
 		heightString = Console.ReadLine();
 		height = double.Parse(heightString);
 		
+				
+		
 		if ((width < minWidth  || width > maxWidth) || (height < minHeight  || height > maxHeight))
+			 
 		{
 			Console.WriteLine ("Entered Width is either too small or too large. \n Enter width between " + minWidth + " and " + maxWidth);
 			Console.WriteLine ("Entered Height is either too small or too large. \n Enter Height between " + minHeight + " and " + maxHeight);
 		}
+		
 		
 		
 		else
@@ -39,7 +46,7 @@ class MyFirstClass
 		Console.ReadKey();
 			
 		}
-		
+		}	
 		
 		
 	}
