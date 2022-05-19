@@ -13,7 +13,7 @@ class MyFirstClass
 		const double Value = 1; // not used anywhere, still have to set due to compilation error in online C# compiler
 		int i;
 		// User Input width & height
-		for ( i = 1 ; i < 4 ; i = i + 1 )
+		for ( i = 1 ; i < 4 ; i++ )
 		{
 			Console.WriteLine ("This is your " +  i + " attempt out of maximum 3 attempts ");
 		Console.WriteLine ( " Enter measured Width : ");
@@ -41,6 +41,7 @@ class MyFirstClass
 		
 		Console.WriteLine ( " The Length of the wood is : " + woodLength + " feet");
 		Console.WriteLine (" The Area of the glass is : " + glassArea + " Square Metres" );
+		break;
 		// To prevents the screen from 
         // running and closing quickly
 		Console.ReadKey();
