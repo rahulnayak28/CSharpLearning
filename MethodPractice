@@ -1,0 +1,27 @@
+using System;
+
+
+class MethodPractice
+{
+	static void doIt()
+	{
+		Console.WriteLine("Hey, Hi, using the method doIt");
+	}
+	
+	static int mult(int i, int j)
+	{
+		int k;
+		k = i * j;
+		return k;
+		
+	}
+	
+	public static void Main()
+	{
+		int Value = 1 , calOutput;
+		doIt();
+		calOutput = mult(4, 60);
+		Console.WriteLine("Thanks for using Mult! The calculated output is : " + calOutput );
+	}
+	
+}
